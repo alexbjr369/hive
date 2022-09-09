@@ -1,0 +1,16 @@
+:root {
+  --theme-color-lightest: #feddae;
+  --theme-color-lightest-rgb: 254, 221, 174;
+  --theme-color-lighter: #fdc87e;
+  --theme-color-lighter-rgb: 253, 200, 126;
+  --theme-color-light: #fdc26d;
+  --theme-color-light-rgb: 253, 194, 109;
+  --theme-color: #fcb44d;
+  --theme-color-rgb: 252, 180, 77;
+  --theme-color-dark: #fba62d;
+  --theme-color-dark-rgb: 251, 166, 45;
+  --theme-color-darker: #fba01c;
+  --theme-color-darker-rgb: 251, 160, 28;
+  --theme-color-darkest: #e28704;
+  --theme-color-darkest-rgb: 251, 160, 28;
+}

@@ -1,0 +1,66 @@
+{
+  "name": "@alexbjr369/hive-scss",
+  "version": "1.0.0-alpha.0",
+  "description": "Hive scss framework.",
+  "author": "Alex Bleggi <https://alexbleggi.netlify.app>",
+  "homepage": "https://alexbleggi.netlify.app/hive",
+  "repository": "https://github.com/alexbjr369/hive.git",
+  "bugs": "https://github.com/alexbjr369/hive/issues",
+  "license": "MIT",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "clean:dist": "shx rm -rf dist",
+    "lint:prettier": "prettier --write . --ignore-unknown",
+    "lint:stylelint": "stylelint src/**/*.scss --fix",
+    "watch:scss": "sass --no-source-map src/:dist --watch",
+    "watch:storybook": "start-storybook --port 6005 --no-manager-cache",
+    "build:scss": "sass --no-source-map src/:dist",
+    "build:storybook": "build-storybook",
+    "minify:css": "postcss --replace dist/**/*.css !dist/**/*.min.css --use autoprefixer && cleancss -O2 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist --batch --batch-suffix .min dist/**/*.css !dist/**/*.min.css",
+    "banner": "node scripts/banner.js",
+    "start": "npm-run-all clean:dist --parallel watch:scss watch:storybook",
+    "build": "npm-run-all clean:dist build:scss banner minify:css lint:prettier lint:stylelint build:storybook"
+  },
+  "prettier": "@alexbjr369/hive-prettier-config",
+  "stylelint": {
+    "extends": [
+      "@alexbjr369/hive-stylelint-scss-config"
+    ]
+  },
+  "browserslist": [
+    "extends @alexbjr369/browserslist-config-hive"
+  ],
+  "devDependencies": {
+    "@alexbjr369/browserslist-config-hive": "^1.0.0-alpha.0",
+    "@alexbjr369/hive-common": "^1.0.0-alpha.0",
+    "@alexbjr369/hive-prettier-config": "^1.0.0-alpha.0",
+    "@alexbjr369/hive-storybook-config": "^1.0.0-alpha.0",
+    "@alexbjr369/hive-stylelint-scss-config": "^1.0.0-alpha.0",
+    "@babel/core": "^7.18.6",
+    "@storybook/addon-a11y": "^6.5.9",
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/html": "^6.5.9",
+    "@storybook/manager-webpack5": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
+    "autoprefixer": "^10.4.7",
+    "babel-loader": "^8.2.5",
+    "clean-css-cli": "^5.6.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^10.0.0",
+    "prepend-file": "^2.0.1",
+    "prettier": "^2.7.1",
+    "sass": "^1.53.0",
+    "shx": "^0.3.4",
+    "storybook-addon-designs": "^6.3.1",
+    "stylelint": "^14.9.1"
+  },
+  "gitHead": "ab504c1debc2fbb86d2dc9bb4a30d8cfeaeb280c"
+}

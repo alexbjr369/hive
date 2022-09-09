@@ -1,0 +1,47 @@
+---
+id: usage
+title: Usage
+sidebar_label: Usage
+description: Just another UI framework ...
+keywords:
+  - Hive UI Framework
+  - Alex Bleggi
+image: /static/other/img/hive.svg
+slug: /react/getting-started/usage
+---
+
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+> **Check Hive's [`playground project`](https://github.com/alexbjr369/hive/tree/main/packages/hive-playground/react).**
+
+**1. Import the chosen Hive CSS framework:**
+
+```tsx {5} title="src/main.tsx"
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+import '@alexbjr369/hive-css/dist/hive.css';
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+```
+
+**2. Import any Hive component in your React component file:**
+
+```tsx {1,4} title="src/App.tsx"
+import { HvContainer } from '@alexbjr369/hive-react';
+
+function App() {
+  return <HvContainer size="fixed">hive</HvContainer>;
+}
+
+export default App;
+```

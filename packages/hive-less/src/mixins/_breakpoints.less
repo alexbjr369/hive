@@ -1,0 +1,9 @@
+// .breakpoint-up(.breakpoint-min(@breakpoints[$@container-key]) [], { ... });
+.breakpoint-up(@breakpoint-key, @content) when not (@breakpoint-key = null) {
+  @media (min-width: @breakpoint-key) {
+    @content();
+  }
+}
+.breakpoint-up(@breakpoint-key, @content) when (@breakpoint-key = null) {
+  @content();
+}

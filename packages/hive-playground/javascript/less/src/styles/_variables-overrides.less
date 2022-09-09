@@ -1,0 +1,36 @@
+////////////////////////////////
+// breakpoints
+////////////////////////////////
+
+@breakpoints: {
+  xs: 0;
+  sm: 576px;
+  md: 768px;
+  lg: 992px;
+  xl: 1200px;
+  xxl: 1400px;
+  custom: 1600px;
+};
+
+////////////////////////////////
+// containers
+////////////////////////////////
+
+@container-widths: {
+  sm: var(~'--@{namespace}-container-width-sm, 540px');
+  md: var(~'--@{namespace}-container-width-md, 720px');
+  lg: var(~'--@{namespace}-container-width-lg, 900px');
+  xl: var(~'--@{namespace}-container-width-xl, 1140px');
+  xxl: var(~'--@{namespace}-container-width-xxl, 1320px');
+  custom: var(~'--@{namespace}-container-width-custom, 1560px');
+};
+
+@container-padding: var(~'--@{namespace}-container-padding, 1.5rem');
+@container-paddings: {
+  sm: var(~'--@{namespace}-container-padding-sm, @{container-padding}');
+  md: var(~'--@{namespace}-container-padding-md, @{container-padding}');
+  lg: var(~'--@{namespace}-container-padding-lg, 2rem');
+  xl: var(~'--@{namespace}-container-padding-xl, @{container-padding}');
+  xxl: var(~'--@{namespace}-container-padding-xxl, @{container-padding}');
+  custom: var(~'--@{namespace}-container-padding-custom, 2rem');
+}; ; ; ;

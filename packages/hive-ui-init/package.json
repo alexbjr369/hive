@@ -1,0 +1,16 @@
+{
+  "name": "hive-ui-init",
+  "version": "1.0.0-alpha.0",
+  "description": "Hive cli wrapper.",
+  "author": "Alex Bleggi <alexbjr369@gmail.com>",
+  "homepage": "https://alexbleggi.netlify.app/hive",
+  "repository": "https://github.com/alexbjr369/hive.git",
+  "bugs": "https://github.com/alexbjr369/hive/issues",
+  "license": "MIT",
+  "type": "module",
+  "bin": "index.js",
+  "dependencies": {
+    "@alexbjr369/hive-cli": "^1.0.0-alpha.0"
+  },
+  "gitHead": "ab504c1debc2fbb86d2dc9bb4a30d8cfeaeb280c"
+}

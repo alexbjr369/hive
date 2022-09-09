@@ -1,0 +1,568 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "HvContainer",
+            "id": "component-HvContainer-13bc835e5dd331f59206f964d9af1a61756a0ec458ee07565304743e6e9abf512897b55bb86bc5d4092afc9c6e945b441294ed7c6ec0b510630b2395f138f630",
+            "file": "projects/hive/src/lib/container/container.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "hv-container",
+            "styleUrls": [
+                "./container.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./container.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "size",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "ContainerSizeValues",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 22,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [
+                {
+                    "name": "class",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ContainerSizeValues } from '@alexbjr369/hive-common';\r\nimport { Component, HostBinding, Input, OnInit } from '@angular/core';\r\nimport classNames from 'classnames';\r\n\r\n@Component({\r\n  selector: 'hv-container',\r\n  templateUrl: './container.component.html',\r\n  styleUrls: ['./container.component.scss'],\r\n})\r\nexport class HvContainer implements OnInit {\r\n  @Input() size?: ContainerSizeValues;\r\n\r\n  constructor() {}\r\n\r\n  @HostBinding('class') get classes(): string {\r\n    return classNames({\r\n      'hv-container': true,\r\n      [`hv-container_${this.size}`]: this.size !== undefined,\r\n    });\r\n  }\r\n\r\n  ngOnInit(): void {}\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./container.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 11
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "string",
+                        "returnType": "string",
+                        "line": 15
+                    }
+                }
+            },
+            "templateData": "<ng-content></ng-content>\r\n"
+        }
+    ],
+    "modules": [
+        {
+            "name": "HiveModule",
+            "id": "module-HiveModule-c3242a5be2d260c3f99d007c7c6f013d16c4abdf159022867048aeb0b76469e0118820f3ba33eda343501b11762c296a1cb77702d139577c4ec93e6d0607c794",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "projects/hive/src/lib/hive.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { HvContainer } from './container/container.component';\r\n\r\n@NgModule({\r\n  declarations: [HvContainer],\r\n  imports: [],\r\n  exports: [HvContainer],\r\n})\r\nexport class HiveModule {}\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "HvContainer"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "HvContainer"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "context",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/hive/src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/layout/containers/containers.default.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Fixed",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/layout/containers/containers.fixed.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "label",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/layout/containers/containers.responsive.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(size: string | undefined) => {\r\n  if (size) return ` size=\"${size}\"`;\r\n\r\n  return '';\r\n}"
+            },
+            {
+                "name": "Overview",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/layout/containers/containers.overview.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "require",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/hive/src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "literal type"
+            },
+            {
+                "name": "Responsive",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/layout/containers/containers.responsive.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/layout/containers/containers.default.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<HvContainer>",
+                "defaultValue": "(args: HvContainer) => ({\r\n  props: args,\r\n  template: `\r\n    <hv-container class=\"stories-container\">\r\n      &lt;hv-container&gt;&lt;/hv-container&gt;\r\n    </hv-container>\r\n  `,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/layout/containers/containers.fixed.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<HvContainer>",
+                "defaultValue": "(args: HvContainer) => ({\r\n  props: args,\r\n  template: `\r\n    <hv-container class=\"stories-container\" size=${FIXED}>\r\n      &lt;hv-container size=\"${FIXED}\"&gt;&lt;/hv-container&gt;\r\n    </hv-container>\r\n  `,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/layout/containers/containers.responsive.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<HvContainer>",
+                "defaultValue": "(args: HvContainer) => ({\r\n  props: args,\r\n  template: `\r\n    <hv-container class=\"stories-container\" size=${args.size}>\r\n      &lt;hv-container${label(args.size)}&gt;&lt;/hv-container&gt;\r\n    </hv-container >\r\n  `,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/layout/containers/containers.overview.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<HvContainer>",
+                "defaultValue": "(args: HvContainer) => ({\r\n  props: args,\r\n  template: `\r\n    <hv-container class=\"stories-container\" size=${FIXED}>\r\n      container ${FIXED}: width changes at each breakpoint\r\n    </hv-container>\r\n    <hv-container class=\"stories-container\" size=${SM}>\r\n      container ${SM}: 100% wide until small breakpoint\r\n    </hv-container>\r\n    <hv-container class=\"stories-container\" size=${MD}>\r\n      container ${MD}: 100% wide until medium breakpoint\r\n    </hv-container>\r\n    <hv-container class=\"stories-container\" size=${LG}>\r\n      container ${LG}: 100% wide until large breakpoint\r\n    </hv-container>\r\n    <hv-container class=\"stories-container\" size=${XL}>\r\n      container ${XL}: 100% wide until extra large breakpoint\r\n    </hv-container>\r\n    <hv-container class=\"stories-container\" size=${XXL}>\r\n      container ${XXL}: 100% wide until extra extra large breakpoint\r\n    </hv-container>\r\n    <hv-container class=\"stories-container\">container: 100% wide at all breakpoints</hv-container>\r\n  `,\r\n})"
+            },
+            {
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/layout/containers/containers.fixed.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "ContainerSizeAttribute"
+            },
+            {
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/layout/containers/containers.overview.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "ContainerSizeAttribute"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "projects/hive/src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/hive/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/hive/src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type"
+                }
+            ],
+            "stories/layout/containers/containers.default.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/layout/containers/containers.default.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/layout/containers/containers.default.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<HvContainer>",
+                    "defaultValue": "(args: HvContainer) => ({\r\n  props: args,\r\n  template: `\r\n    <hv-container class=\"stories-container\">\r\n      &lt;hv-container&gt;&lt;/hv-container&gt;\r\n    </hv-container>\r\n  `,\r\n})"
+                }
+            ],
+            "stories/layout/containers/containers.fixed.stories.ts": [
+                {
+                    "name": "Fixed",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/layout/containers/containers.fixed.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/layout/containers/containers.fixed.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<HvContainer>",
+                    "defaultValue": "(args: HvContainer) => ({\r\n  props: args,\r\n  template: `\r\n    <hv-container class=\"stories-container\" size=${FIXED}>\r\n      &lt;hv-container size=\"${FIXED}\"&gt;&lt;/hv-container&gt;\r\n    </hv-container>\r\n  `,\r\n})"
+                },
+                {
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/layout/containers/containers.fixed.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "ContainerSizeAttribute"
+                }
+            ],
+            "stories/layout/containers/containers.responsive.stories.ts": [
+                {
+                    "name": "label",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/layout/containers/containers.responsive.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(size: string | undefined) => {\r\n  if (size) return ` size=\"${size}\"`;\r\n\r\n  return '';\r\n}"
+                },
+                {
+                    "name": "Responsive",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/layout/containers/containers.responsive.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/layout/containers/containers.responsive.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<HvContainer>",
+                    "defaultValue": "(args: HvContainer) => ({\r\n  props: args,\r\n  template: `\r\n    <hv-container class=\"stories-container\" size=${args.size}>\r\n      &lt;hv-container${label(args.size)}&gt;&lt;/hv-container&gt;\r\n    </hv-container >\r\n  `,\r\n})"
+                }
+            ],
+            "stories/layout/containers/containers.overview.stories.ts": [
+                {
+                    "name": "Overview",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/layout/containers/containers.overview.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/layout/containers/containers.overview.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<HvContainer>",
+                    "defaultValue": "(args: HvContainer) => ({\r\n  props: args,\r\n  template: `\r\n    <hv-container class=\"stories-container\" size=${FIXED}>\r\n      container ${FIXED}: width changes at each breakpoint\r\n    </hv-container>\r\n    <hv-container class=\"stories-container\" size=${SM}>\r\n      container ${SM}: 100% wide until small breakpoint\r\n    </hv-container>\r\n    <hv-container class=\"stories-container\" size=${MD}>\r\n      container ${MD}: 100% wide until medium breakpoint\r\n    </hv-container>\r\n    <hv-container class=\"stories-container\" size=${LG}>\r\n      container ${LG}: 100% wide until large breakpoint\r\n    </hv-container>\r\n    <hv-container class=\"stories-container\" size=${XL}>\r\n      container ${XL}: 100% wide until extra large breakpoint\r\n    </hv-container>\r\n    <hv-container class=\"stories-container\" size=${XXL}>\r\n      container ${XXL}: 100% wide until extra extra large breakpoint\r\n    </hv-container>\r\n    <hv-container class=\"stories-container\">container: 100% wide at all breakpoints</hv-container>\r\n  `,\r\n})"
+                },
+                {
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/layout/containers/containers.overview.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "ContainerSizeAttribute"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
+    "routes": [],
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "projects/hive/src/lib/container/container.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HvContainer",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/hive/src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "context",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/hive/src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "require",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/layout/containers/containers.default.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/layout/containers/containers.default.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/layout/containers/containers.fixed.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Fixed",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/layout/containers/containers.fixed.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/layout/containers/containers.fixed.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/layout/containers/containers.overview.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Overview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/layout/containers/containers.overview.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/layout/containers/containers.overview.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/layout/containers/containers.responsive.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "label",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/layout/containers/containers.responsive.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Responsive",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/layout/containers/containers.responsive.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}

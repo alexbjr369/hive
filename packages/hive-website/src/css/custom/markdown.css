@@ -1,0 +1,52 @@
+header > h1 {
+  font-size: 3rem !important;
+}
+
+.markdown > h1 {
+  font-size: 3rem;
+}
+
+.markdown > h2 {
+  color: var(--ifm-color-primary);
+  font-size: 2.5rem;
+}
+
+.markdown > h3 {
+  font-size: 2.25rem;
+}
+
+.markdown > h4 {
+  font-size: 2rem;
+}
+
+.markdown > h5 {
+  font-size: 1.75rem;
+}
+
+.markdown > h6 {
+  font-size: 1.5rem;
+}
+
+.markdown img {
+  display: block;
+  max-height: 530px;
+  margin: 32px 0;
+}
+
+.markdown iframe {
+  display: block;
+  max-height: 530px;
+  margin: 32px auto;
+}
+
+.markdown strong {
+  color: var(--ifm-color-primary);
+}
+
+.admonition-content strong {
+  color: #000;
+}
+
+html[data-theme='light'] .admonition-content strong {
+  color: #fff;
+}

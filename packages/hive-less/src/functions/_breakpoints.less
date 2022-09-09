@@ -1,0 +1,23 @@
+// .container-name(.breakpoint-infix(.breakpoint-min(@breakpoints[$@breakpoint-key]) [], @breakpoint-key) []) [];
+.container-name(@breakpoint-infix) when not (@breakpoint-infix = ~'') {
+  @return: @breakpoint-infix;
+}
+.container-name(@breakpoint-infix) when (@breakpoint-infix = ~'') {
+  @return: ~'_fixed';
+}
+
+// .breakpoint-infix(.breakpoint-min(@breakpoints[$@breakpoint-key]) [], @breakpoint-key) [];
+.breakpoint-infix(@breakpoint-key, @key, @modifier: '_') when (@breakpoint-key = null) {
+  @return: ~'';
+}
+.breakpoint-infix(@breakpoint-key, @key, @modifier: '_') when not (@breakpoint-key = null) {
+  @return: ~'@{modifier}@{key}';
+}
+
+// .breakpoint-min(@breakpoints[$@container-key]);
+.breakpoint-min(@breakpoint-key) when not (@breakpoint-key = 0) {
+  @return: @breakpoint-key;
+}
+.breakpoint-min(@breakpoint-key) when (@breakpoint-key = 0) {
+  @return: null;
+}

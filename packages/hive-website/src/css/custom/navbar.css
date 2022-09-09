@@ -1,0 +1,68 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: var(--surface-01);
+}
+
+.navbar__brand {
+  color: var(--text-color);
+}
+
+@media (any-hover: hover) {
+  .navbar__brand:hover {
+    color: var(--ifm-color-primary);
+  }
+}
+
+.navbar__logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  transition: transform 0.5s;
+}
+
+@media (any-hover: hover) {
+  .navbar__brand:hover .navbar__logo {
+    transform: rotate(180deg) scale(0.9);
+  }
+}
+
+.navbar__title {
+  margin: 0;
+}
+
+.navbar__link {
+  padding: 8px;
+  color: var(--text-color);
+}
+
+.navbar__link--active {
+  color: var(--ifm-color-primary);
+}
+
+.dropdown .navbar__link {
+  padding: 0 16px 0 0;
+}
+
+.navbar__toggle {
+  margin: 0 0 0 auto;
+  color: var(--text-color);
+}
+
+.navbar .navbar-icon {
+  margin-right: 16px;
+}
+
+img[alt='Hive'] {
+  width: 48px;
+  height: 48px !important;
+  border-radius: 50%;
+}
+
+/* media-queries */
+
+@media (max-width: 996px) {
+  .navbar__items {
+    flex-direction: row-reverse;
+  }
+}

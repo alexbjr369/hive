@@ -1,0 +1,42 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "hive": {
+      "projectType": "library",
+      "root": "projects/hive",
+      "sourceRoot": "projects/hive/src",
+      "prefix": "hv",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/hive/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/hive/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/hive/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/hive/src/test.ts",
+            "tsConfig": "projects/hive/tsconfig.spec.json",
+            "karmaConfig": "projects/hive/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "hive"
+}

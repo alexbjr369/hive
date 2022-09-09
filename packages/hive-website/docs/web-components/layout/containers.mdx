@@ -1,0 +1,559 @@
+---
+id: containers
+title: Containers
+sidebar_label: Containers
+description: Just another UI framework ...
+keywords:
+  - Hive UI Framework
+  - Alex Bleggi
+image: /static/other/img/hive.svg
+slug: /web-components/layout/containers
+---
+
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Containers
+
+> **Containers are the most basic building block in Hive, they align and pad the content within a given viewport.**
+
+## Features
+
+**Links:** [`Storybook example`](https://alexbleggi.netlify.app/hive/stories/web-components/?path=/story/layout-containers--overview) [`Figma design`](https://www.figma.com/file/1qFtanhiPCXP6zQRw3fgWn/?node-id=35%3A3)
+
+Containers are **required** when using Hive's default grid system.
+
+The table below illustrates how each container's `max-width` compares to each other:
+
+|                  | Extra small <span style={{fontWeight: 400}}><576px</span> | Small <span style={{fontWeight: 400}}>≥576px</span> | Medium <span style={{fontWeight: 400}}>≥768px</span> | Large <span style={{fontWeight: 400}}>≥992px</span> | X-Large <span style={{fontWeight: 400}}>≥1200px</span> | XX-Large <span style={{fontWeight: 400}}>≥1400px</span> |
+| ---------------- | --------------------------------------------------------- | --------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------- |
+| `size="fixed"`   | <span style={{color: '#8d8d8d'}}>100%</span>              | 540px                                               | 720px                                                | 960px                                               | 1140px                                                 | 1320px                                                  |
+| `size="sm"`      | <span style={{color: '#8d8d8d'}}>100%</span>              | 540px                                               | 720px                                                | 960px                                               | 1140px                                                 | 1320px                                                  |
+| `size="md"`      | <span style={{color: '#8d8d8d'}}>100%</span>              | <span style={{color: '#8d8d8d'}}>100%</span>        | 720px                                                | 960px                                               | 1140px                                                 | 1320px                                                  |
+| `size="lg"`      | <span style={{color: '#8d8d8d'}}>100%</span>              | <span style={{color: '#8d8d8d'}}>100%</span>        | <span style={{color: '#8d8d8d'}}>100%</span>         | 960px                                               | 1140px                                                 | 1320px                                                  |
+| `size="xl"`      | <span style={{color: '#8d8d8d'}}>100%</span>              | <span style={{color: '#8d8d8d'}}>100%</span>        | <span style={{color: '#8d8d8d'}}>100%</span>         | <span style={{color: '#8d8d8d'}}>100%</span>        | 1140px                                                 | 1320px                                                  |
+| `size="xxl"`     | <span style={{color: '#8d8d8d'}}>100%</span>              | <span style={{color: '#8d8d8d'}}>100%</span>        | <span style={{color: '#8d8d8d'}}>100%</span>         | <span style={{color: '#8d8d8d'}}>100%</span>        | <span style={{color: '#8d8d8d'}}>100%</span>           | 1320px                                                  |
+| `<hv-container>` | <span style={{color: '#8d8d8d'}}>100%</span>              | <span style={{color: '#8d8d8d'}}>100%</span>        | <span style={{color: '#8d8d8d'}}>100%</span>         | <span style={{color: '#8d8d8d'}}>100%</span>        | <span style={{color: '#8d8d8d'}}>100%</span>           | <span style={{color: '#8d8d8d'}}>100%</span>            |
+
+## Markup
+
+### Default Container
+
+> **A full width container, spanning the entire width of the viewport.**
+
+<Tabs
+  defaultValue="javascript"
+  values={[
+    {label: 'JavaScript', value: 'javascript'},
+    {label: 'React', value: 'react'},
+    {label: 'Vue', value: 'vue'},
+    {label: 'Angular', value: 'angular'},
+  ]}>
+  <TabItem value="javascript">
+
+```html
+<hv-container>100% wide at all breakpoints</hv-container>
+```
+
+  </TabItem>
+  <TabItem value="react">
+
+```html
+<HvContainer>100% wide at all breakpoints</HvContainer>
+```
+
+  </TabItem>
+  <TabItem value="vue">
+
+```html
+<hv-container>100% wide at all breakpoints</hv-container>
+```
+
+  </TabItem>
+  <TabItem value="angular">
+
+```html
+<hv-container>100% wide at all breakpoints</hv-container>
+```
+
+  </TabItem>
+</Tabs>
+
+**Links:** [`Storybook example`](https://alexbleggi.netlify.app/hive/stories/web-components/?path=/story/layout-containers--default) [`Figma design`](https://www.figma.com/file/1qFtanhiPCXP6zQRw3fgWn/?node-id=113%3A741)
+
+### Responsive Containers
+
+> **Responsive containers allow you to specify a modifier that is 100% wide until the specified breakpoint is reached, after which a `max-width` is applied for each of the higher breakpoints.**
+
+<Tabs
+  defaultValue="javascript"
+  values={[
+    {label: 'JavaScript', value: 'javascript'},
+    {label: 'React', value: 'react'},
+    {label: 'Vue', value: 'vue'},
+    {label: 'Angular', value: 'angular'},
+  ]}>
+  <TabItem value="javascript">
+
+```html
+<hv-container size="sm">100% wide until small breakpoint</hv-container>
+<hv-container size="md">100% wide until medium breakpoint</hv-container>
+<hv-container size="lg">100% wide until large breakpoint</hv-container>
+<hv-container size="xl">100% wide until extra large breakpoint</hv-container>
+<hv-container size="xxl">100% wide until extra extra large breakpoint</hv-container>
+```
+
+  </TabItem>
+  <TabItem value="react">
+
+```html
+<HvContainer size="sm">100% wide until small breakpoint</HvContainer>
+<HvContainer size="md">100% wide until medium breakpoint</HvContainer>
+<HvContainer size="lg">100% wide until large breakpoint</HvContainer>
+<HvContainer size="xl">100% wide until extra large breakpoint</HvContainer>
+<HvContainer size="xxl">100% wide until extra extra large breakpoint</HvContainer>
+```
+
+  </TabItem>
+  <TabItem value="vue">
+
+```html
+<hv-container size="sm">100% wide until small breakpoint</hv-container>
+<hv-container size="md">100% wide until medium breakpoint</hv-container>
+<hv-container size="lg">100% wide until large breakpoint</hv-container>
+<hv-container size="xl">100% wide until extra large breakpoint</hv-container>
+<hv-container size="xxl">100% wide until extra extra large breakpoint</hv-container>
+```
+
+  </TabItem>
+  <TabItem value="angular">
+
+```html
+<hv-container size="sm">100% wide until small breakpoint</hv-container>
+<hv-container size="md">100% wide until medium breakpoint</hv-container>
+<hv-container size="lg">100% wide until large breakpoint</hv-container>
+<hv-container size="xl">100% wide until extra large breakpoint</hv-container>
+<hv-container size="xxl">100% wide until extra extra large breakpoint</hv-container>
+```
+
+  </TabItem>
+</Tabs>
+
+**Links:** [`Storybook example`](https://alexbleggi.netlify.app/hive/stories/web-components/?path=/story/layout-containers--responsive) [`Figma design`](https://www.figma.com/file/1qFtanhiPCXP6zQRw3fgWn/?node-id=113%3A852)
+
+### Fixed Container
+
+> **A responsive and fixed-width container, its `max-width` changes at each breakpoint.**
+
+<Tabs
+  defaultValue="javascript"
+  values={[
+    {label: 'JavaScript', value: 'javascript'},
+    {label: 'React', value: 'react'},
+    {label: 'Vue', value: 'vue'},
+    {label: 'Angular', value: 'angular'},
+  ]}>
+  <TabItem value="javascript">
+
+```html
+<hv-container size="fixed">width changes at each breakpoint</hv-container>
+```
+
+  </TabItem>
+  <TabItem value="react">
+
+```html
+<HvContainer size="fixed">width changes at each breakpoint</HvContainer>
+```
+
+  </TabItem>
+  <TabItem value="vue">
+
+```html
+<hv-container size="fixed">width changes at each breakpoint</hv-container>
+```
+
+  </TabItem>
+  <TabItem value="angular">
+
+```html
+<hv-container size="fixed">width changes at each breakpoint</hv-container>
+```
+
+  </TabItem>
+</Tabs>
+
+**Links:** [`Storybook example`](https://alexbleggi.netlify.app/hive/stories/web-components/?path=/story/layout-containers--fixed) [`Figma design`](https://www.figma.com/file/1qFtanhiPCXP6zQRw3fgWn/?node-id=113%3A921)
+
+## Customize
+
+<Tabs
+  defaultValue="css"
+  values={[
+    {label: 'CSS', value: 'css'},
+    {label: 'Less', value: 'less'},
+    {label: 'Sass', value: 'sass'},
+    {label: 'SCSS', value: 'scss'},
+    {label: 'Stylus', value: 'stylus'},
+  ]}>
+  <TabItem value="css">
+
+> **Check Hive's [`playground project`](https://github.com/alexbjr369/hive/tree/main/packages/hive-playground/javascript/css). In this example project, [Rollup](https://rollupjs.org/guide/en/) and [TypeScript](https://www.typescriptlang.org/) were used.**
+
+**Links:** [`Storybook example`](https://alexbleggi.netlify.app/hive/stories/playground/css/?path=/story/layout-containers--default)
+
+Its possible to modify the container `max-width` in a given breakpoint:
+
+```css {4} title="variables-overrides.css"
+:root {
+  --hv-container-width-sm: 540px;
+  --hv-container-width-md: 720px;
+  --hv-container-width-lg: 900px;
+  --hv-container-width-xl: 1140px;
+  --hv-container-width-xxl: 1320px;
+}
+```
+
+Modify the container `padding`:
+
+```css {2} title="variables-overrides.css"
+:root {
+  --hv-container-padding: 1.5rem;
+}
+```
+
+Modify the container `padding` for a given breakpoint:
+
+```css {4} title="variables-overrides.css"
+:root {
+  --hv-container-padding-sm: 1rem;
+  --hv-container-padding-md: 1rem;
+  --hv-container-padding-lg: 2rem;
+  --hv-container-padding-xl: 1rem;
+  --hv-container-padding-xxl: 1rem;
+}
+```
+
+  </TabItem>
+  <TabItem value="less">
+
+> **Check Hive's [`playground project`](https://github.com/alexbjr369/hive/tree/main/packages/hive-playground/javascript/less). In this example project, [Rollup](https://rollupjs.org/guide/en/) and [TypeScript](https://www.typescriptlang.org/) were used.**
+
+**Links:** [`Storybook example`](https://alexbleggi.netlify.app/hive/stories/playground/web-components/javascript/?path=/story/layout-containers--default)
+
+Its possible to modify the container `max-width` in a given breakpoint:
+
+```less {4} title="_variables-overrides.less"
+@container-widths: {
+  sm: var(~"--@{namespace}-container-width-sm, 540px");
+  md: var(~"--@{namespace}-container-width-md, 720px");
+  lg: var(~"--@{namespace}-container-width-lg, 900px");
+  xl: var(~"--@{namespace}-container-width-xl, 1140px");
+  xxl: var(~"--@{namespace}-container-width-xxl, 1320px");
+};
+```
+
+Add a new container `max-width` in a custom breakpoint:
+
+```less {8,17} title="_variables-overrides.less"
+@breakpoints: {
+  xs: 0;
+  sm: 576px;
+  md: 768px;
+  lg: 992px;
+  xl: 1200px;
+  xxl: 1400px;
+  custom: 1600px;
+};
+
+@container-widths: {
+  sm: var(~"--@{namespace}-container-width-sm, 540px");
+  md: var(~"--@{namespace}-container-width-md, 720px");
+  lg: var(~"--@{namespace}-container-width-lg, 960px");
+  xl: var(~"--@{namespace}-container-width-xl, 1140px");
+  xxl: var(~"--@{namespace}-container-width-xxl, 1320px");
+  custom: var(~"--@{namespace}-container-width-custom, 1560px");
+};
+```
+
+Modify the container `padding`:
+
+```less {1} title="_variables-overrides.less"
+@container-padding: var(~"--@{namespace}-container-padding, 1.5rem");
+```
+
+Modify the container `padding` for a given breakpoint:
+
+```less {4} title="_variables-overrides.less"
+@container-paddings: {
+  sm: var(~"--@{namespace}-container-padding-sm, @{container-padding}");
+  md: var(~"--@{namespace}-container-padding-md, @{container-padding}");
+  lg: var(~"--@{namespace}-container-padding-lg, 2rem");
+  xl: var(~"--@{namespace}-container-padding-xl, @{container-padding}");
+  xxl: var(~"--@{namespace}-container-padding-xxl, @{container-padding}");
+};
+```
+
+Add a `padding` to a custom container in a custom breakpoint:
+
+```less {8,17,26} title="_variables-overrides.less"
+@breakpoints: {
+  xs: 0;
+  sm: 576px;
+  md: 768px;
+  lg: 992px;
+  xl: 1200px;
+  xxl: 1400px;
+  custom: 1600px;
+};
+
+@container-widths: {
+  sm: var(~"--@{namespace}-container-width-sm, 540px");
+  md: var(~"--@{namespace}-container-width-md, 720px");
+  lg: var(~"--@{namespace}-container-width-lg, 960px");
+  xl: var(~"--@{namespace}-container-width-xl, 1140px");
+  xxl: var(~"--@{namespace}-container-width-xxl, 1320px");
+  custom: var(~"--@{namespace}-container-width-custom, 1560px");
+};
+
+@container-paddings: {
+  sm: var(~"--@{namespace}-container-padding-sm, @{container-padding}");
+  md: var(~"--@{namespace}-container-padding-md, @{container-padding}");
+  lg: var(~"--@{namespace}-container-padding-lg, @{container-padding}");
+  xl: var(~"--@{namespace}-container-padding-xl, @{container-padding}");
+  xxl: var(~"--@{namespace}-container-padding-xxl, @{container-padding}");
+  custom: var(~"--@{namespace}-container-padding-custom, 2rem");
+};
+```
+
+  </TabItem>
+  <TabItem value="sass">
+
+> **Check Hive's [`playground project`](https://github.com/alexbjr369/hive/tree/main/packages/hive-playground/javascript/sass). In this example project, [Rollup](https://rollupjs.org/guide/en/) and [TypeScript](https://www.typescriptlang.org/) were used.**
+
+**Links:** [`Storybook example`](https://alexbleggi.netlify.app/hive/stories/playground/web-components/javascript/?path=/story/layout-containers--default)
+
+Its possible to modify the container `max-width` in a given breakpoint:
+
+```sass title="_variables-overrides.sass"
+$container-widths: (sm: var(--#{$namespace}-container-width-sm, 540px), md: var(--#{$namespace}-container-width-md, 720px), lg: var(--#{$namespace}-container-width-lg, 900px), xl: var(--#{$namespace}-container-width-xl, 1140px), xxl: var(--#{$namespace}-container-width-xxl, 1320px), custom: var(--#{$namespace}-container-width-custom, 1560px))
+```
+
+Add a new container `max-width` in a custom breakpoint:
+
+```sass title="_variables-overrides.sass"
+$breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 900px, xl: 1200px, xxl: 1400px, custom: 1600px)
+
+$container-widths: (sm: var(--#{$namespace}-container-width-sm, 540px), md: var(--#{$namespace}-container-width-md, 720px), lg: var(--#{$namespace}-container-width-lg, 900px), xl: var(--#{$namespace}-container-width-xl, 1140px), xxl: var(--#{$namespace}-container-width-xxl, 1320px), custom: var(--#{$namespace}-container-width-custom, 1560px))
+```
+
+Modify the container `padding`:
+
+```sass title="_variables-overrides.sass"
+$container-padding: var(--#{$namespace}-container-padding, 1.5rem)
+```
+
+Modify the container `padding` for a given breakpoint:
+
+```sass title="_variables-overrides.sass"
+$container-paddings: (sm: var(--#{$namespace}-container-padding-sm, $container-padding), md: var(--#{$namespace}-container-padding-md, $container-padding), lg: var(--#{$namespace}-container-padding-lg, 2rem), xl: var(--#{$namespace}-container-padding-xl, $container-padding), xxl: var(--#{$namespace}-container-padding-xxl, $container-padding), custom: var(--#{$namespace}-container-padding-custom, 2rem))
+```
+
+Add a `padding` to a custom container in a custom breakpoint:
+
+```sass title="_variables-overrides.sass"
+$breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 900px, xl: 1200px, xxl: 1400px, custom: 1600px)
+
+$container-widths: (sm: var(--#{$namespace}-container-width-sm, 540px), md: var(--#{$namespace}-container-width-md, 720px), lg: var(--#{$namespace}-container-width-lg, 900px), xl: var(--#{$namespace}-container-width-xl, 1140px), xxl: var(--#{$namespace}-container-width-xxl, 1320px), custom: var(--#{$namespace}-container-width-custom, 1560px))
+
+$container-paddings: (sm: var(--#{$namespace}-container-padding-sm, $container-padding), md: var(--#{$namespace}-container-padding-md, $container-padding), lg: var(--#{$namespace}-container-padding-lg, 2rem), xl: var(--#{$namespace}-container-padding-xl, $container-padding), xxl: var(--#{$namespace}-container-padding-xxl, $container-padding), custom: var(--#{$namespace}-container-padding-custom, 2rem))
+```
+
+  </TabItem>
+  <TabItem value="scss">
+
+> **Check Hive's [`playground project`](https://github.com/alexbjr369/hive/tree/main/packages/hive-playground/javascript/scss). In this example project, [Rollup](https://rollupjs.org/guide/en/) and [TypeScript](https://www.typescriptlang.org/) were used.**
+
+**Links:** [`Storybook example`](https://alexbleggi.netlify.app/hive/stories/playground/web-components/javascript/?path=/story/layout-containers--default)
+
+Its possible to modify the container `max-width` in a given breakpoint:
+
+```scss {4} title="_variables-overrides.scss"
+$container-widths: (
+  sm: var(--#{$namespace}-container-width-sm, 540px),
+  md: var(--#{$namespace}-container-width-md, 720px),
+  lg: var(--#{$namespace}-container-width-lg, 900px),
+  xl: var(--#{$namespace}-container-width-xl, 1140px),
+  xxl: var(--#{$namespace}-container-width-xxl, 1320px),
+);
+```
+
+Add a new container `max-width` in a custom breakpoint:
+
+```scss {8,17} title="_variables-overrides.scss"
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  custom: 1600px,
+);
+
+$container-widths: (
+  sm: var(--#{$namespace}-container-width-sm, 540px),
+  md: var(--#{$namespace}-container-width-md, 720px),
+  lg: var(--#{$namespace}-container-width-lg, 960px),
+  xl: var(--#{$namespace}-container-width-xl, 1140px),
+  xxl: var(--#{$namespace}-container-width-xxl, 1320px),
+  custom: var(--#{$namespace}-container-width-custom, 1560px),
+);
+```
+
+Modify the container `padding`:
+
+```scss {1} title="_variables-overrides.scss"
+$container-padding: var(--#{$namespace}-container-padding, 1.5rem);
+```
+
+Modify the container `padding` for a given breakpoint:
+
+```scss {4} title="_variables-overrides.scss"
+$container-paddings: (
+  sm: var(--#{$namespace}-container-padding-sm, $container-padding),
+  md: var(--#{$namespace}-container-padding-md, $container-padding),
+  lg: var(--#{$namespace}-container-padding-lg, 2rem),
+  xl: var(--#{$namespace}-container-padding-xl, $container-padding),
+  xxl: var(--#{$namespace}-container-padding-xxl, $container-padding),
+);
+```
+
+Add a `padding` to a custom container in a custom breakpoint:
+
+```scss {8,17,26} title="_variables-overrides.scss"
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  custom: 1600px,
+);
+
+$container-widths: (
+  sm: var(--#{$namespace}-container-width-sm, 540px),
+  md: var(--#{$namespace}-container-width-md, 720px),
+  lg: var(--#{$namespace}-container-width-lg, 960px),
+  xl: var(--#{$namespace}-container-width-xl, 1140px),
+  xxl: var(--#{$namespace}-container-width-xxl, 1320px),
+  custom: var(--#{$namespace}-container-width-custom, 1560px),
+);
+
+$container-paddings: (
+  sm: var(--#{$namespace}-container-padding-sm, $container-padding),
+  md: var(--#{$namespace}-container-padding-md, $container-padding),
+  lg: var(--#{$namespace}-container-padding-lg, $container-padding),
+  xl: var(--#{$namespace}-container-padding-xl, $container-padding),
+  xxl: var(--#{$namespace}-container-padding-xxl, $container-padding),
+  custom: var(--#{$namespace}-container-padding-custom, 2rem),
+);
+```
+
+  </TabItem>
+  <TabItem value="stylus">
+
+> **Check Hive's [`playground project`](https://github.com/alexbjr369/hive/tree/main/packages/hive-playground/javascript/stylus). In this example project, [Rollup](https://rollupjs.org/guide/en/) and [TypeScript](https://www.typescriptlang.org/) were used.**
+
+**Links:** [`Storybook example`](https://alexbleggi.netlify.app/hive/stories/playground/web-components/javascript/?path=/story/layout-containers--default)
+
+Its possible to modify the container `max-width` in a given breakpoint:
+
+```stylus {4} title="_variables-overrides.styl"
+container-widths = {
+  sm: s('var(--%s-container-width-sm, 540px)', namespace),
+  md: s('var(--%s-container-width-md, 720px)', namespace),
+  lg: s('var(--%s-container-width-lg, 900px)', namespace),
+  xl: s('var(--%s-container-width-xl, 1140px)', namespace),
+  xxl: s('var(--%s-container-width-xxl, 1320px)', namespace),
+}
+```
+
+Add a new container `max-width` in a custom breakpoint:
+
+```stylus {8,17} title="_variables-overrides.styl"
+breakpoints = {
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  custom: 1600px,
+}
+
+container-widths = {
+  sm: s('var(--%s-container-width-sm, 540px)', namespace),
+  md: s('var(--%s-container-width-md, 720px)', namespace),
+  lg: s('var(--%s-container-width-lg, 900px)', namespace),
+  xl: s('var(--%s-container-width-xl, 1140px)', namespace),
+  xxl: s('var(--%s-container-width-xxl, 1320px)', namespace),
+  custom: s('var(--%s-container-width-custom, 1560px)', namespace),
+}
+```
+
+Modify the container `padding`:
+
+```stylus {1} title="_variables-overrides.styl"
+container-padding = s('var(--%s-container-padding, 1.5rem)', namespace)
+```
+
+Modify the container `padding` for a given breakpoint:
+
+```stylus {4} title="_variables-overrides.styl"
+container-paddings = {
+  sm: s('var(--%s-container-padding-sm, %s)', namespace, container-padding),
+  md: s('var(--%s-container-padding-md, %s)', namespace, container-padding),
+  lg: s('var(--%s-container-padding-lg, %s)', namespace, 2rem),
+  xl: s('var(--%s-container-padding-xl, %s)', namespace, container-padding),
+  xxl: s('var(--%s-container-padding-xxl, %s)', namespace, container-padding),
+}
+```
+
+Add a `padding` to a custom container in a custom breakpoint:
+
+```stylus {8,17,26} title="_variables-overrides.styl"
+breakpoints = {
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  custom: 1600px,
+}
+
+container-widths = {
+  sm: s('var(--%s-container-width-sm, 540px)', namespace),
+  md: s('var(--%s-container-width-md, 720px)', namespace),
+  lg: s('var(--%s-container-width-lg, 900px)', namespace),
+  xl: s('var(--%s-container-width-xl, 1140px)', namespace),
+  xxl: s('var(--%s-container-width-xxl, 1320px)', namespace),
+  custom: s('var(--%s-container-width-custom, 1560px)', namespace),
+}
+
+container-paddings = {
+  sm: s('var(--%s-container-padding-sm, %s)', namespace, container-padding),
+  md: s('var(--%s-container-padding-md, %s)', namespace, container-padding),
+  lg: s('var(--%s-container-padding-lg, %s)', namespace, 2rem),
+  xl: s('var(--%s-container-padding-xl, %s)', namespace, container-padding),
+  xxl: s('var(--%s-container-padding-xxl, %s)', namespace, container-padding),
+  custom: s('var(--%s-container-padding-custom, %s)', namespace, 2rem),
+}
+```
+
+  </TabItem>
+</Tabs>

@@ -1,0 +1,17 @@
+{
+  "name": "hive-angular",
+  "version": "1.0.0-alpha.0",
+  "description": "Hive angular framework.",
+  "author": "Alex Bleggi <alexbjr369@gmail.com>",
+  "homepage": "https://alexbleggi.netlify.app/hive",
+  "repository": "https://github.com/alexbjr369/hive.git",
+  "bugs": "https://github.com/alexbjr369/hive/issues",
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^14.0.6",
+    "@angular/core": "^14.0.6"
+  },
+  "dependencies": {
+    "tslib": "^2.4.0"
+  }
+}

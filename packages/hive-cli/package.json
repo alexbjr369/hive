@@ -1,0 +1,52 @@
+{
+  "name": "@alexbjr369/hive-cli",
+  "version": "1.0.0-alpha.0",
+  "description": "Hive cli.",
+  "author": "Alex Bleggi <https://alexbleggi.netlify.app>",
+  "homepage": "https://alexbleggi.netlify.app/hive",
+  "repository": "https://github.com/alexbjr369/hive.git",
+  "bugs": "https://github.com/alexbjr369/hive/issues",
+  "license": "MIT",
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "type": "module",
+  "bin": {
+    "hive": "bin/index.js"
+  },
+  "scripts": {
+    "clean:dist": "shx rm -rf dist",
+    "lint:prettier": "prettier --write . --ignore-unknown",
+    "build:rollup": "rollup --config",
+    "build": "npm-run-all clean:dist lint:prettier build:rollup"
+  },
+  "prettier": "@alexbjr369/hive-prettier-config",
+  "dependencies": {
+    "commander": "^9.3.0",
+    "concurrently": "^7.2.2",
+    "figlet": "^1.5.2",
+    "inquirer": "^9.0.1",
+    "listr": "^0.14.3",
+    "pkg-install": "^1.0.0"
+  },
+  "devDependencies": {
+    "@alexbjr369/hive-common": "^1.0.0-alpha.0",
+    "@alexbjr369/hive-prettier-config": "^1.0.0-alpha.0",
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.3",
+    "@types/figlet": "^1.5.4",
+    "@types/inquirer": "^8.2.1",
+    "@types/listr": "^0.14.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.7.1",
+    "rollup": "^2.76.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "shx": "^0.3.4",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  },
+  "gitHead": "ab504c1debc2fbb86d2dc9bb4a30d8cfeaeb280c"
+}

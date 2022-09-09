@@ -1,0 +1,31 @@
+{
+  "angularCompilerOptions": {
+    "flatModuleId": "@alexbjr369/hive-wc-angular",
+    "flatModuleOutFile": "core.js",
+    "fullTemplateTypeCheck": false,
+    "skipTemplateCodegen": true,
+    "strictMetadataEmit": true
+  },
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["dom", "es2015"],
+    "module": "es2015",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "outDir": "dist",
+    "removeComments": false,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "target": "es2015"
+  },
+  "include": ["src/**/*.ts"]
+}

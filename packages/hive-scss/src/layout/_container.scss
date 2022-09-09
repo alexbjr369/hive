@@ -1,0 +1,31 @@
+.#{$namespace}-container {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+
+@each $container-key, $container-value in $container-widths {
+  @include breakpoint-up($container-key) {
+    $extend-breakpoint: true;
+
+    %container-#{$container-key} {
+      max-width: $container-value;
+      padding: 0 map-get($container-paddings, $container-key);
+    }
+
+    @each $breakpoint-key, $breakpoint-value in $breakpoints {
+      @if ($extend-breakpoint) {
+        $infix: breakpoint-infix($breakpoint-key);
+
+        .#{$namespace}-container#{if($infix != '', $infix, '_fixed')} {
+          @extend %container-#{$container-key};
+        }
+
+        @if ($container-key == $breakpoint-key) {
+          $extend-breakpoint: false;
+        }
+      }
+    }
+  }
+}

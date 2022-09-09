@@ -1,0 +1,116 @@
+---
+id: usage
+title: Usage
+sidebar_label: Usage
+description: Just another UI framework ...
+keywords:
+  - Hive UI Framework
+  - Alex Bleggi
+image: /static/other/img/hive.svg
+slug: /css/getting-started/usage
+---
+
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+## CSS Precompilers
+
+There are two options to import Hive CSS framework:
+
+###### Importing the full library:
+
+<Tabs
+  defaultValue="css"
+  values={[
+    {label: 'CSS', value: 'css'},
+    {label: 'Less', value: 'less'},
+    {label: 'Sass', value: 'sass'},
+    {label: 'SCSS', value: 'scss'},
+    {label: 'Stylus', value: 'stylus'},
+  ]}>
+  <TabItem value="css">
+
+```css title="main.css"
+import '@alexbjr369/hive-css/dist/hive.min.css';
+```
+
+  </TabItem>
+  <TabItem value="less">
+
+```less title="main.less"
+@import '@alexbjr369/hive-less/src/hive.less';
+```
+
+  </TabItem>
+  <TabItem value="sass">
+
+```sass title="main.sass"
+@import '@alexbjr369/hive-less/src/hive.sass';
+```
+
+  </TabItem>
+  <TabItem value="scss">
+
+```scss title="main.scss"
+@import '@alexbjr369/hive-less/src/hive.scss';
+```
+
+  </TabItem>
+  <TabItem value="stylus">
+
+```stylus title="main.styl"
+@import '@alexbjr369/hive-less/src/hive.styl';
+```
+
+  </TabItem>
+</Tabs>
+
+###### Importing the library modules:
+
+<Tabs
+  defaultValue="css"
+  values={[
+    {label: 'CSS', value: 'css'},
+    {label: 'Less', value: 'less'},
+    {label: 'Sass', value: 'sass'},
+    {label: 'SCSS', value: 'scss'},
+    {label: 'Stylus', value: 'stylus'},
+  ]}>
+  <TabItem value="css">
+
+```css title="main.css"
+import '@alexbjr369/hive-css/dist/hive.layout.min.css';
+```
+
+  </TabItem>
+  <TabItem value="less">
+
+```less title="main.less"
+@import '@alexbjr369/hive-less/src/hive.layout.less';
+```
+
+  </TabItem>
+  <TabItem value="sass">
+
+```sass title="main.sass"
+@import '@alexbjr369/hive-less/src/hive.layout.sass';
+```
+
+  </TabItem>
+  <TabItem value="scss">
+
+```scss title="main.scss"
+@import '@alexbjr369/hive-less/src/hive.layout.scss';
+```
+
+  </TabItem>
+  <TabItem value="stylus">
+
+```stylus title="main.styl"
+@import '@alexbjr369/hive-less/src/hive.layout.styl';
+```
+
+  </TabItem>
+</Tabs>

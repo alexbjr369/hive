@@ -1,0 +1,79 @@
+{
+  "name": "@alexbjr369/hive-wc-core",
+  "version": "1.0.0-alpha.0",
+  "description": "Hive web components framework.",
+  "author": "Alex Bleggi <alexbjr369@gmail.com>",
+  "homepage": "https://alexbleggi.netlify.app/hive",
+  "repository": "https://github.com/alexbjr369/hive.git",
+  "bugs": "https://github.com/alexbjr369/hive/issues",
+  "license": "MIT",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/hive-wc-core/hive-wc-core.esm.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "lint:prettier": "prettier --write . --ignore-unknown",
+    "lint:stylelint": "stylelint src/**/*.scss --fix",
+    "generate:stencil": "stencil generate",
+    "test:stencil": "stencil test --spec --e2e",
+    "watch:test:stencil": "stencil test --spec --e2e --watchAll",
+    "watch:stencil": "stencil build --docs-readme --watch",
+    "watch:storybook": "start-storybook --port 6006 --no-manager-cache",
+    "start:stencil": "stencil build --dev --watch --serve",
+    "build:stencil": "stencil build --docs-readme",
+    "build:storybook": "build-storybook",
+    "start": "npm-run-all --parallel watch:stencil watch:storybook",
+    "build": "npm-run-all lint:prettier lint:stylelint build:stencil build:storybook"
+  },
+  "prettier": "@alexbjr369/hive-prettier-config",
+  "stylelint": {
+    "extends": [
+      "@alexbjr369/hive-stylelint-scss-config"
+    ]
+  },
+  "browserslist": [
+    "extends @alexbjr369/browserslist-config-hive"
+  ],
+  "dependencies": {
+    "@alexbjr369/hive-common": "^1.0.0-alpha.0",
+    "@stencil/core": "^2.17.1"
+  },
+  "devDependencies": {
+    "@alexbjr369/browserslist-config-hive": "^1.0.0-alpha.0",
+    "@alexbjr369/hive-prettier-config": "^1.0.0-alpha.0",
+    "@alexbjr369/hive-scss": "^1.0.0-alpha.0",
+    "@alexbjr369/hive-storybook-config": "^1.0.0-alpha.0",
+    "@alexbjr369/hive-stylelint-scss-config": "^1.0.0-alpha.0",
+    "@babel/core": "^7.18.6",
+    "@stencil/angular-output-target": "^0.4.0",
+    "@stencil/react-output-target": "^0.3.1",
+    "@stencil/sass": "^1.5.2",
+    "@stencil/vue-output-target": "^0.6.1",
+    "@storybook/addon-a11y": "^6.5.9",
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/manager-webpack5": "^6.5.9",
+    "@storybook/web-components": "^6.5.9",
+    "@types/jest": "^28.1.5",
+    "babel-loader": "^8.2.5",
+    "jest": "^28.1.3",
+    "jest-cli": "^28.1.3",
+    "lit-html": "^2.2.6",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.14",
+    "puppeteer": "^15.4.0",
+    "storybook-addon-designs": "^6.3.1",
+    "stylelint": "^14.9.1"
+  },
+  "gitHead": "ab504c1debc2fbb86d2dc9bb4a30d8cfeaeb280c"
+}

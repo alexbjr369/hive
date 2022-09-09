@@ -1,0 +1,179 @@
+---
+id: usage
+title: Usage
+sidebar_label: Usage
+description: Just another UI framework ...
+keywords:
+  - Hive UI Framework
+  - Alex Bleggi
+image: /static/other/img/hive.svg
+slug: /web-components/getting-started/usage
+---
+
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs
+  defaultValue="javascript"
+  values={[
+    {label: 'JavaScript', value: 'javascript'},
+    {label: 'React', value: 'react'},
+    {label: 'Vue', value: 'vue'},
+    {label: 'Angular', value: 'angular'},
+  ]}>
+  <TabItem value="javascript">
+
+Assuming you are using a build tool:
+
+> **Check Hive's [`playground project`](https://github.com/alexbjr369/hive/tree/main/packages/hive-playground/web-components/javascript). In this example project, [Vite](https://vitejs.dev/) was used.**
+
+**1. Import the chosen Hive CSS framework:**
+
+```ts title="src/main.ts"
+import '@alexbjr369/hive-css/dist/hive.css';
+```
+
+**2. Import and define Hive custom elements:**
+
+```ts title="src/main.ts"
+import { defineCustomElements } from '@alexbjr369/hive-wc-core/loader';
+defineCustomElements();
+```
+
+**3. Use any Hive component in your HTML or JavaScript/TypeScript component file:**
+
+```html title="src/index.html"
+<hv-container size="fixed">hive</hv-container>
+```
+
+  </TabItem>
+  <TabItem value="react">
+
+> **Check Hive's [`playground project`](https://github.com/alexbjr369/hive/tree/main/packages/hive-playground/web-components/react).**
+
+**1. Import the chosen Hive CSS framework:**
+
+```tsx {5} title="src/main.tsx"
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+import '@alexbjr369/hive-css/dist/hive.css';
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+```
+
+**2. Import any Hive component in your React component file:**
+
+```tsx {1,4} title="src/App.tsx"
+import { HvContainer } from '@alexbjr369/hive-wc-react';
+
+function App() {
+  return <HvContainer size="fixed">hive</HvContainer>;
+}
+
+export default App;
+```
+
+  </TabItem>
+  <TabItem value="vue">
+
+> **Check Hive's [`playground project`](https://github.com/alexbjr369/hive/tree/main/packages/hive-playground/web-components/vue).**
+
+**1. Import the chosen Hive CSS framework:**
+
+```ts {4} title="src/main.ts"
+import { createApp } from 'vue';
+import App from './App.vue';
+
+import '@alexbjr369/hive-css/dist/hive.css';
+
+createApp(App).mount('#app');
+```
+
+**2. Import any Hive component in your Vue component file:**
+
+```ts {2,8,14} title="src/App.vue"
+<script lang="ts">
+import { HvContainer } from '@alexbjr369/hive-wc-vue';
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'App',
+  components: {
+    HvContainer,
+  },
+});
+</script>
+
+<template>
+  <hv-container size="fixed">hive</hv-container>
+</template>
+
+<style></style>
+```
+
+  </TabItem>
+  <TabItem value="angular">
+
+> **Check Hive's [`playground project`](https://github.com/alexbjr369/hive/tree/main/packages/hive-playground/web-components/angular).**
+
+**1. Import and define Hive custom elements:**
+
+```ts {6,7} title="src/main.ts"
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app/app.module';
+import { environment } from './environments/environment';
+
+import { defineCustomElements } from '@alexbjr369/hive-wc-core/loader';
+defineCustomElements();
+
+if (environment.production) {
+  enableProdMode();
+}
+
+platformBrowserDynamic()
+  .bootstrapModule(AppModule)
+  .catch((err) => console.error(err));
+```
+
+**2. Import Hive Web Components module:**
+
+```ts {1,9} title="src/app/app.module.ts"
+import { HiveWCAngularModule } from '@alexbjr369/hive-wc-angular';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, HiveWCAngularModule],
+  providers: [],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}
+```
+
+**3. Import the chosen Hive CSS framework:**
+
+```css title="src/styles.css"
+@import '@alexbjr369/hive-css/dist/hive.css';
+```
+
+**4. Use any Hive component in your Angular component file:**
+
+```html title="src/app/app.component.html"
+<hv-container size="fixed">hive</hv-container>
+```
+
+  </TabItem>
+</Tabs>
