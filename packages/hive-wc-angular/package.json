@@ -1,6 +1,6 @@
 {
   "name": "@alexbjr369/hive-wc-angular",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "description": "Angular wrapper for hive web components framework.",
   "author": "Alex Bleggi <alexbjr369@gmail.com>",
   "homepage": "https://alexbleggi.netlify.app/hive",
@@ -21,7 +21,7 @@
   },
   "prettier": "@alexbjr369/hive-prettier-config",
   "dependencies": {
-    "@alexbjr369/hive-wc-core": "^1.0.0-alpha.0"
+    "@alexbjr369/hive-wc-core": "^1.0.0-alpha.1"
   },
   "devDependencies": {
     "@alexbjr369/hive-prettier-config": "^1.0.0-alpha.0",

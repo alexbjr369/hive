@@ -1,6 +1,6 @@
 {
   "name": "@alexbjr369/hive-angular",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "description": "Hive angular framework.",
   "author": "Alex Bleggi <alexbjr369@gmail.com>",
   "homepage": "https://alexbleggi.netlify.app/hive",
@@ -51,7 +51,7 @@
     "@alexbjr369/browserslist-config-hive": "^1.0.0-alpha.0",
     "@alexbjr369/hive-common": "^1.0.0-alpha.0",
     "@alexbjr369/hive-prettier-config": "^1.0.0-alpha.0",
-    "@alexbjr369/hive-scss": "^1.0.0-alpha.0",
+    "@alexbjr369/hive-scss": "^1.0.0-alpha.1",
     "@alexbjr369/hive-storybook-config": "^1.0.0-alpha.0",
     "@alexbjr369/hive-stylelint-scss-config": "^1.0.0-alpha.0",
     "@angular-devkit/build-angular": "^14.0.6",

@@ -1,6 +1,6 @@
 {
   "name": "@alexbjr369/hive-react",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "description": "Hive react framework.",
   "author": "Alex Bleggi <alexbjr369@gmail.com>",
   "homepage": "https://alexbleggi.netlify.app/hive",
@@ -47,7 +47,7 @@
     "@alexbjr369/browserslist-config-hive": "^1.0.0-alpha.0",
     "@alexbjr369/hive-common": "^1.0.0-alpha.0",
     "@alexbjr369/hive-prettier-config": "^1.0.0-alpha.0",
-    "@alexbjr369/hive-scss": "^1.0.0-alpha.0",
+    "@alexbjr369/hive-scss": "^1.0.0-alpha.1",
     "@alexbjr369/hive-storybook-config": "^1.0.0-alpha.0",
     "@alexbjr369/hive-stylelint-scss-config": "^1.0.0-alpha.0",
     "@babel/core": "^7.18.6",
