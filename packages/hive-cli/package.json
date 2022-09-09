@@ -1,6 +1,6 @@
 {
   "name": "@alexbjr369/hive-cli",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "Hive cli.",
   "author": "Alex Bleggi <https://alexbleggi.netlify.app>",
   "homepage": "https://alexbleggi.netlify.app/hive",
@@ -48,5 +48,5 @@
     "tslib": "^2.4.0",
     "typescript": "^4.7.4"
   },
-  "gitHead": "ab504c1debc2fbb86d2dc9bb4a30d8cfeaeb280c"
+  "gitHead": "0e5a7d74001dcbadea5c06bca73074e4d1f4ae10"
 }

@@ -1,6 +1,6 @@
 {
   "name": "@alexbjr369/hive-wc-react",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "React wrapper for hive web components framework.",
   "author": "Alex Bleggi <alexbjr369@gmail.com>",
   "homepage": "https://alexbleggi.netlify.app/hive",
@@ -21,7 +21,7 @@
   },
   "prettier": "@alexbjr369/hive-prettier-config",
   "dependencies": {
-    "@alexbjr369/hive-wc-core": "^1.0.0-alpha.1"
+    "@alexbjr369/hive-wc-core": "^1.0.0-alpha.2"
   },
   "devDependencies": {
     "@alexbjr369/hive-prettier-config": "^1.0.0-alpha.0",
@@ -43,5 +43,5 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "gitHead": "ab504c1debc2fbb86d2dc9bb4a30d8cfeaeb280c"
+  "gitHead": "0e5a7d74001dcbadea5c06bca73074e4d1f4ae10"
 }
