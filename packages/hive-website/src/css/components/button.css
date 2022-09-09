@@ -1,0 +1,39 @@
+.button--custom {
+  padding: 8px 32px;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 24px;
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+  border-radius: 0;
+}
+
+.button--invert {
+  color: var(--ifm-color-primary);
+  background-color: transparent;
+  border-color: var(--ifm-color-primary);
+}
+
+/* states */
+
+.button--custom:hover {
+  color: var(--surface-02);
+  background-color: var(--text-color);
+  border-color: var(--text-color);
+}
+
+.button--invert:hover {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+}
+
+/* media-queries */
+
+@media (max-width: 670px) {
+  .button--custom {
+    padding: 8px 16px;
+    font-weight: 400;
+    font-size: 20px;
+  }
+}

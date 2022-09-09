@@ -1,0 +1,8 @@
+@function breakpoint-infix($breakpoint-key, $modifier: '_')
+  $min: breakpoint-min($breakpoint-key)
+  @return if($min == null, '', '#{$modifier}#{$breakpoint-key}')
+
+
+@function breakpoint-min($breakpoint-key)
+  $min: map-get($breakpoints, $breakpoint-key)
+  @return if($min != 0, $min, null)

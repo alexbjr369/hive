@@ -1,0 +1,27 @@
+.@{namespace}-container {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 @container-padding;
+}
+
+each(@container-widths, .(@container-value, @container-key, @container-index) {
+  .breakpoint-up(.breakpoint-min(@breakpoints[$@container-key]) [], {
+
+    // workaround due to: https://github.com/less/less.js/issues/3315
+    .workaround {
+      max-width: @container-value;
+      padding: 0 @container-paddings[$@container-key];
+    }
+
+    each(@breakpoints, .(@breakpoint-value, @breakpoint-key, @breakpoint-index) {
+      & when (boolean(@breakpoint-index - @container-index - 1 < 1)) {
+        @container-name: .container-name(.breakpoint-infix(.breakpoint-min(@breakpoints[$@breakpoint-key]) [], @breakpoint-key) []) [];
+
+        .@{namespace}-container@{container-name} {
+          &:extend(.workaround);
+        }
+      }
+    });
+  });
+});

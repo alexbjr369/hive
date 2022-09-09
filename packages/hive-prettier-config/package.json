@@ -1,0 +1,27 @@
+{
+  "name": "@alexbjr369/hive-prettier-config",
+  "version": "1.0.0-alpha.0",
+  "description": "Hive shared prettier configuration.",
+  "author": "Alex Bleggi <https://alexbleggi.netlify.app>",
+  "homepage": "https://alexbleggi.netlify.app/hive",
+  "repository": "https://github.com/alexbjr369/hive.git",
+  "bugs": "https://github.com/alexbjr369/hive/issues",
+  "license": "MIT",
+  "private": true,
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean:dist": "shx rm -rf dist",
+    "generate:dist": "shx mkdir dist",
+    "minify:javascript": "terser src/index.js --compress --output dist/index.js",
+    "build": "npm-run-all clean:dist generate:dist minify:javascript"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "shx": "^0.3.4",
+    "terser": "^5.14.2"
+  },
+  "gitHead": "efb3d24145ddc893eb9ba4cdeb74babc3230dc8d"
+}

@@ -1,0 +1,48 @@
+---
+id: usage
+title: Usage
+sidebar_label: Usage
+description: Just another UI framework ...
+keywords:
+  - Hive UI Framework
+  - Alex Bleggi
+image: /static/other/img/hive.svg
+slug: /angular/getting-started/usage
+---
+
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+> **Check Hive's [`playground project`](https://github.com/alexbjr369/hive/tree/main/packages/hive-playground/angular).**
+
+**1. Import Hive Web Components module:**
+
+```ts {1,9} title="src/app/app.module.ts"
+import { HiveModule } from '@alexbjr369/hive-angular/dist';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, HiveModule],
+  providers: [],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}
+```
+
+**2. Import the chosen Hive CSS framework:**
+
+```css title="src/styles.css"
+@import '@alexbjr369/hive-css/dist/hive.css';
+```
+
+**3. Use any Hive component in your Angular component file:**
+
+```html title="src/app/app.component.html"
+<hv-container size="fixed">hive</hv-container>
+```

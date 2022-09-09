@@ -1,0 +1,36 @@
+.navbar-sidebar {
+  width: 300px;
+  background-color: var(--surface-01);
+}
+
+.navbar-sidebar__backdrop {
+  cursor: pointer;
+}
+
+.navbar-sidebar .react-toggle {
+  margin-left: auto;
+}
+
+/* components */
+
+.navbar-sidebar .navbar-icon {
+  margin: 0;
+}
+
+/* themes */
+
+html[data-theme='light'] .navbar-sidebar {
+  background-color: var(--text-color);
+}
+
+html[data-theme='light'] .navbar-sidebar .navbar__title {
+  color: var(--ifm-menu-color);
+}
+
+/* media-queries */
+
+@media (max-width: 576px) {
+  .navbar-sidebar {
+    width: 250px;
+  }
+}

@@ -1,0 +1,51 @@
+---
+id: usage
+title: Usage
+sidebar_label: Usage
+description: Just another UI framework ...
+keywords:
+  - Hive UI Framework
+  - Alex Bleggi
+image: /static/other/img/hive.svg
+slug: /vue/getting-started/usage
+---
+
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+> **Check Hive's [`playground project`](https://github.com/alexbjr369/hive/tree/main/packages/hive-playground/vue).**
+
+**1. Import the chosen Hive CSS framework:**
+
+```ts {4} title="src/main.ts"
+import { createApp } from 'vue';
+import App from './App.vue';
+
+import '@alexbjr369/hive-css/dist/hive.css';
+
+createApp(App).mount('#app');
+```
+
+**2. Import any Hive component in your Vue component file:**
+
+```ts {2,8,14} title="src/App.vue"
+<script lang="ts">
+import { HvContainer } from '@alexbjr369/hive-vue';
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'App',
+  components: {
+    HvContainer,
+  },
+});
+</script>
+
+<template>
+  <hv-container size="fixed">hive</hv-container>
+</template>
+
+<style></style>
+```

@@ -1,0 +1,45 @@
+{
+  "name": "@alexbjr369/hive-common",
+  "version": "1.0.0-alpha.0",
+  "description": "Hive shared commons.",
+  "author": "Alex Bleggi <https://alexbleggi.netlify.app>",
+  "homepage": "https://alexbleggi.netlify.app/hive",
+  "repository": "https://github.com/alexbjr369/hive.git",
+  "bugs": "https://github.com/alexbjr369/hive/issues",
+  "license": "MIT",
+  "private": true,
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs.js",
+      "import": "./dist/index.es.js"
+    },
+    "./styles": "./dist/index.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean:dist": "shx rm -rf dist",
+    "lint:prettier": "prettier --write . --ignore-unknown",
+    "build:rollup": "rollup --config",
+    "build": "npm-run-all clean:dist build:rollup lint:prettier"
+  },
+  "prettier": "@alexbjr369/hive-prettier-config",
+  "devDependencies": {
+    "@alexbjr369/hive-prettier-config": "^1.0.0-alpha.0",
+    "@rollup/plugin-typescript": "^8.3.3",
+    "cssnano": "^5.1.12",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.7.1",
+    "rollup": "^2.76.0",
+    "rollup-plugin-styles": "^4.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "shx": "^0.3.4",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  },
+  "gitHead": "efb3d24145ddc893eb9ba4cdeb74babc3230dc8d"
+}

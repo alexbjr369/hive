@@ -1,0 +1,7 @@
+breakpoint-infix(breakpoint-key, modifier = _)
+  min = breakpoint-min(breakpoint-key)
+  return min == null ? '' : s('%s%s', modifier, unquote(breakpoint-key))
+
+breakpoint-min(breakpoint-key)
+  min = breakpoints[breakpoint-key]
+  return min != 0 ? min : null

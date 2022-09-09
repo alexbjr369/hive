@@ -1,0 +1,24 @@
+.{namespace}-container
+  display block
+  width 100%
+  margin 0 auto
+  padding 0 container-padding
+
+for container-key, container-value in container-widths
+  +breakpoint-up(container-key)
+    extend-breakpoint = true
+
+    $.{namespace}-container-{container-key}
+      max-width container-value
+      padding 0 container-paddings[container-key]
+
+    for breakpoint-key, breakpoint-value in breakpoints
+      if extend-breakpoint
+        infix = breakpoint-infix(breakpoint-key);
+        container-name = infix != '' ? infix : '_fixed'
+
+        .{namespace}-container{container-name}
+          @extend $.{namespace}-container-{container-key}
+
+        if (container-key == breakpoint-key)
+          extend-breakpoint = false

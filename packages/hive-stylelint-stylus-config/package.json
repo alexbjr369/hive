@@ -1,0 +1,43 @@
+{
+  "name": "@alexbjr369/hive-stylelint-stylus-config",
+  "version": "1.0.0-alpha.0",
+  "description": "Hive shared stylelint stylus configuration.",
+  "author": "Alex Bleggi <https://alexbleggi.netlify.app>",
+  "homepage": "https://alexbleggi.netlify.app/hive",
+  "repository": "https://github.com/alexbjr369/hive.git",
+  "bugs": "https://github.com/alexbjr369/hive/issues",
+  "license": "MIT",
+  "private": true,
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean:dist": "shx rm -rf dist",
+    "generate:dist": "shx mkdir dist",
+    "lint:prettier": "prettier --write . --ignore-unknown",
+    "minify:javascript": "terser src/index.js --compress --output dist/index.js",
+    "build": "npm-run-all clean:dist generate:dist lint:prettier minify:javascript"
+  },
+  "prettier": "@alexbjr369/hive-prettier-config",
+  "dependencies": {
+    "postcss-styl": "^0.11.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-order": "^5.0.0"
+  },
+  "devDependencies": {
+    "@alexbjr369/hive-prettier-config": "^1.0.0-alpha.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
+    "shx": "^0.3.4",
+    "stylelint": "^14.9.1",
+    "terser": "^5.14.2"
+  },
+  "peerDependencies": {
+    "postcss": "^8.4.14",
+    "stylelint": "^14.9.1"
+  },
+  "gitHead": "efb3d24145ddc893eb9ba4cdeb74babc3230dc8d"
+}

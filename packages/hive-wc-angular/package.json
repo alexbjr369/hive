@@ -1,0 +1,45 @@
+{
+  "name": "@alexbjr369/hive-wc-angular",
+  "version": "1.0.0-alpha.0",
+  "description": "Angular wrapper for hive web components framework.",
+  "author": "Alex Bleggi <alexbjr369@gmail.com>",
+  "homepage": "https://alexbleggi.netlify.app/hive",
+  "repository": "https://github.com/alexbjr369/hive.git",
+  "bugs": "https://github.com/alexbjr369/hive/issues",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint:prettier": "prettier --write . --ignore-unknown",
+    "clean:dist": "shx rm -rf dist",
+    "tsc": "ngc --project .",
+    "build": "npm-run-all lint:prettier clean:dist tsc"
+  },
+  "prettier": "@alexbjr369/hive-prettier-config",
+  "dependencies": {
+    "@alexbjr369/hive-wc-core": "^1.0.0-alpha.0"
+  },
+  "devDependencies": {
+    "@alexbjr369/hive-prettier-config": "^1.0.0-alpha.0",
+    "@angular/common": "^14.0.6",
+    "@angular/compiler": "^14.0.6",
+    "@angular/compiler-cli": "^14.0.6",
+    "@angular/core": "^14.0.6",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.7.1",
+    "rxjs": "^7.5.6",
+    "shx": "^0.3.4",
+    "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "@angular/common": "^14.0.6",
+    "@angular/compiler": "^14.0.6",
+    "@angular/compiler-cli": "^14.0.6",
+    "@angular/core": "^14.0.6"
+  },
+  "gitHead": "ab504c1debc2fbb86d2dc9bb4a30d8cfeaeb280c"
+}

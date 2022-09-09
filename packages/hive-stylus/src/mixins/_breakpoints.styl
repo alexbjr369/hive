@@ -1,0 +1,7 @@
+breakpoint-up(breakpoint-key)
+  min = breakpoint-min(breakpoint-key)
+  if min
+    @media (min-width: min)
+      {block}
+  else
+    {block}

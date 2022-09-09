@@ -1,0 +1,5 @@
+/dist/*
+/storybook-static
+
+!/dist/hive.css
+!/dist/hive.layout.css

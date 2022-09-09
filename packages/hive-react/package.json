@@ -1,0 +1,83 @@
+{
+  "name": "@alexbjr369/hive-react",
+  "version": "1.0.0-alpha.0",
+  "description": "Hive react framework.",
+  "author": "Alex Bleggi <alexbjr369@gmail.com>",
+  "homepage": "https://alexbleggi.netlify.app/hive",
+  "repository": "https://github.com/alexbjr369/hive.git",
+  "bugs": "https://github.com/alexbjr369/hive/issues",
+  "license": "MIT",
+  "main": "./dist/hive.umd.js",
+  "module": "./dist/hive.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/hive.es.js",
+      "require": "./dist/hive.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "preview": "vite preview",
+    "watch:react": "vite",
+    "watch:storybook": "start-storybook --port 6007 --no-manager-cache",
+    "build:react": "tsc && vite build",
+    "storybook": "start-storybook -p 6006",
+    "build:storybook": "build-storybook",
+    "start": "npm-run-all watch:storybook",
+    "build": "npm-run-all build:react build:storybook"
+  },
+  "prettier": "@alexbjr369/hive-prettier-config",
+  "stylelint": {
+    "extends": [
+      "@alexbjr369/hive-stylelint-scss-config"
+    ]
+  },
+  "browserslist": [
+    "extends @alexbjr369/browserslist-config-hive"
+  ],
+  "dependencies": {
+    "classnames": "^2.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@alexbjr369/browserslist-config-hive": "^1.0.0-alpha.0",
+    "@alexbjr369/hive-common": "^1.0.0-alpha.0",
+    "@alexbjr369/hive-prettier-config": "^1.0.0-alpha.0",
+    "@alexbjr369/hive-scss": "^1.0.0-alpha.0",
+    "@alexbjr369/hive-storybook-config": "^1.0.0-alpha.0",
+    "@alexbjr369/hive-stylelint-scss-config": "^1.0.0-alpha.0",
+    "@babel/core": "^7.18.6",
+    "@storybook/addon-a11y": "^6.5.9",
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/manager-webpack5": "^6.5.9",
+    "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/node": "^18.0.4",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.0",
+    "babel-loader": "^8.2.5",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
+    "storybook-addon-designs": "^6.3.1",
+    "stylelint": "^14.9.1",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.0",
+    "vite-plugin-dts": "^1.3.0"
+  },
+  "peerDependencies": {
+    "classnames": "^2.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "gitHead": "ab504c1debc2fbb86d2dc9bb4a30d8cfeaeb280c"
+}

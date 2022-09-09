@@ -1,0 +1,41 @@
+{
+  "name": "@alexbjr369/hive-css",
+  "version": "1.0.0-alpha.0",
+  "description": "Hive css framework.",
+  "author": "Alex Bleggi <alexbjr369@gmail.com>",
+  "homepage": "https://alexbleggi.netlify.app/hive",
+  "repository": "https://github.com/alexbjr369/hive.git",
+  "bugs": "https://github.com/alexbjr369/hive/issues",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean:dist": "shx rm -rf dist",
+    "lint:prettier": "prettier --write . --ignore-unknown",
+    "build:scss": "sass --no-source-map src/:dist",
+    "minify:css": "postcss --replace dist/**/*.css !dist/**/*.min.css --use autoprefixer && cleancss -O2 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist --batch --batch-suffix .min dist/**/*.css !dist/**/*.min.css",
+    "banner": "node scripts/banner.js",
+    "build": "npm-run-all clean:dist build:scss banner minify:css lint:prettier"
+  },
+  "prettier": "@alexbjr369/hive-prettier-config",
+  "browserslist": [
+    "extends @alexbjr369/browserslist-config-hive"
+  ],
+  "devDependencies": {
+    "@alexbjr369/browserslist-config-hive": "^1.0.0-alpha.0",
+    "@alexbjr369/hive-common": "^1.0.0-alpha.0",
+    "@alexbjr369/hive-prettier-config": "^1.0.0-alpha.0",
+    "@alexbjr369/hive-scss": "^1.0.0-alpha.0",
+    "autoprefixer": "^10.4.7",
+    "clean-css-cli": "^5.6.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^10.0.0",
+    "prepend-file": "^2.0.1",
+    "prettier": "^2.7.1",
+    "sass": "^1.53.0",
+    "shx": "^0.3.4"
+  },
+  "gitHead": "ab504c1debc2fbb86d2dc9bb4a30d8cfeaeb280c"
+}

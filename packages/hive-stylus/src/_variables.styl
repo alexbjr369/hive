@@ -1,0 +1,39 @@
+//////////////////////////////
+// namespace
+//////////////////////////////
+
+namespace = hv
+
+//////////////////////////////
+// breakpoints
+//////////////////////////////
+
+breakpoints = {
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+}
+
+//////////////////////////////
+// container
+//////////////////////////////
+
+container-widths = {
+  sm: s('var(--%s-container-width-sm, 540px)', namespace),
+  md: s('var(--%s-container-width-md, 720px)', namespace),
+  lg: s('var(--%s-container-width-lg, 960px)', namespace),
+  xl: s('var(--%s-container-width-xl, 1140px)', namespace),
+  xxl: s('var(--%s-container-width-xxl, 1320px)', namespace),
+}
+
+container-padding = s('var(--%s-container-padding, 1rem)', namespace)
+container-paddings = {
+  sm: s('var(--%s-container-padding-sm, %s)', namespace, container-padding),
+  md: s('var(--%s-container-padding-md, %s)', namespace, container-padding),
+  lg: s('var(--%s-container-padding-lg, %s)', namespace, container-padding),
+  xl: s('var(--%s-container-padding-xl, %s)', namespace, container-padding),
+  xxl: s('var(--%s-container-padding-xxl, %s)', namespace, container-padding),
+}

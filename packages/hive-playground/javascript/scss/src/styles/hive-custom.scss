@@ -1,0 +1,15 @@
+// 1. hive required stylesheets
+@import '~@alexbjr369/hive-scss/src/variables';
+
+// 2. variables overrides
+@import './variables-overrides';
+
+// 3. remainder of hive required stylesheets
+@import '~@alexbjr369/hive-scss/src/functions';
+@import '~@alexbjr369/hive-scss/src/mixins';
+
+// 4. optional components
+@import '~@alexbjr369/hive-scss/src/layout/container';
+
+// 5. autoral imports
+@import './autoral';

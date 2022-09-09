@@ -1,0 +1,25 @@
+table thead {
+  background-color: transparent;
+}
+
+table thead tr {
+  text-align: left;
+  border: 0;
+}
+
+table th,
+table td {
+  border: 0;
+}
+
+table td {
+  min-width: 100px;
+}
+
+table td:first-child {
+  min-width: 200px;
+}
+
+table tr:nth-child(2n) {
+  background-color: transparent;
+}

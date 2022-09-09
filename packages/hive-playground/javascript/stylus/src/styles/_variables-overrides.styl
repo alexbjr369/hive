@@ -1,0 +1,36 @@
+////////////////////////////////
+// breakpoints
+////////////////////////////////
+
+breakpoints = {
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  custom: 1600px,
+}
+
+////////////////////////////////
+// containers
+////////////////////////////////
+
+container-widths = {
+  sm: s('var(--%s-container-width-sm, 540px)', namespace),
+  md: s('var(--%s-container-width-md, 720px)', namespace),
+  lg: s('var(--%s-container-width-lg, 900px)', namespace),
+  xl: s('var(--%s-container-width-xl, 1140px)', namespace),
+  xxl: s('var(--%s-container-width-xxl, 1320px)', namespace),
+  custom: s('var(--%s-container-width-custom, 1560px)', namespace),
+}
+
+container-padding = s('var(--%s-container-padding, 1.5rem)', namespace)
+container-paddings = {
+  sm: s('var(--%s-container-padding-sm, %s)', namespace, container-padding),
+  md: s('var(--%s-container-padding-md, %s)', namespace, container-padding),
+  lg: s('var(--%s-container-padding-lg, %s)', namespace, 2rem),
+  xl: s('var(--%s-container-padding-xl, %s)', namespace, container-padding),
+  xxl: s('var(--%s-container-padding-xxl, %s)', namespace, container-padding),
+  custom: s('var(--%s-container-padding-custom, %s)', namespace, 2rem),
+}

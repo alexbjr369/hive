@@ -1,0 +1,209 @@
+---
+id: customize
+title: Customize
+sidebar_label: Customize
+description: Just another UI framework ...
+keywords:
+  - Hive UI Framework
+  - Alex Bleggi
+image: /static/other/img/hive.svg
+slug: /css/customize/customize
+---
+
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+> **There are multiple ways to customize Hive CSS framework. It will depend on your project, build tools, browser support, and more.**
+
+## Overview
+
+It is recommend the use of a package manager so you can extend Hive's source files.
+
+## CSS Precompilers
+
+### File structure
+
+Whenever possible, avoid modifying Hive's core files. Create your own stylesheet that imports Hive so you can modify and extend it.
+Assuming you're using a package manager, you'll have a file structure that looks like this:
+
+<Tabs
+  defaultValue="less"
+  values={[
+    {label: 'Less', value: 'less'},
+    {label: 'Sass', value: 'sass'},
+    {label: 'SCSS', value: 'scss'},
+    {label: 'Stylus', value: 'stylus'},
+  ]}>
+  <TabItem value="less">
+
+```
+your-project/
+├─ less/
+│   └─ hive-custom.less
+└─ node_modules/
+    └─ @alexbjr369/
+        └─ hive-less/
+            └─ src/
+```
+
+  </TabItem>
+  <TabItem value="sass">
+
+```
+your-project/
+├─ sass/
+│   └─ hive-custom.sass
+└─ node_modules/
+    └─ @alexbjr369/
+        └─ hive-sass/
+            └─ src/
+```
+
+  </TabItem>
+  <TabItem value="scss">
+
+```
+your-project/
+├─ scss/
+│   └─ hive-custom.scss
+└─ node_modules/
+    └─ @alexbjr369/
+        └─ hive-scss/
+            └─ src/
+```
+
+  </TabItem>
+  <TabItem value="stylus">
+
+```
+your-project/
+├─ stylus/
+│   └─ hive-custom.styl
+└─ node_modules/
+    └─ @alexbjr369/
+        └─ hive-stylus/
+            └─ src/
+```
+
+  </TabItem>
+</Tabs>
+
+### Importing
+
+In your `hive-custom.{css,less,sass,scss,styl}`, import Hive's source files.
+
+<Tabs
+  defaultValue="css"
+  values={[
+    {label: 'CSS', value: 'css'},
+    {label: 'Less', value: 'less'},
+    {label: 'Sass', value: 'sass'},
+    {label: 'SCSS', value: 'scss'},
+    {label: 'Stylus', value: 'stylus'},
+  ]}>
+  <TabItem value="css">
+
+> **Check Hive's [`playground project`](https://github.com/alexbjr369/hive/tree/main/packages/hive-playground/javascript/css). In this example project, [Rollup](https://rollupjs.org/guide/en/) and [TypeScript](https://www.typescriptlang.org/) were used.**
+
+```css title="hive-custom.css"
+:root {
+  /* variables overrides */
+}
+```
+
+  </TabItem>
+  <TabItem value="less">
+
+> **Check Hive's [`playground project`](https://github.com/alexbjr369/hive/tree/main/packages/hive-playground/javascript/less). In this example project, [Rollup](https://rollupjs.org/guide/en/) and [TypeScript](https://www.typescriptlang.org/) were used.**
+
+```less title="hive-custom.less"
+// 1. hive required stylesheets
+@import '../node_modules/@alexbjr369/hive-less/src/variables.less';
+
+// 2. variables overrides
+@import './variables-overrides.less';
+
+// 3. remainder of hive required stylesheets
+@import '../node_modules/@alexbjr369/hive-less/src/functions.less';
+@import '../node_modules/@alexbjr369/hive-less/src/mixins.less';
+
+// 4. optional components
+@import '../node_modules/@alexbjr369/hive-less/src/layout/container.less';
+
+// 5. autoral imports
+@import './autoral.less';
+```
+
+  </TabItem>
+  <TabItem value="sass">
+
+> **Check Hive's [`playground project`](https://github.com/alexbjr369/hive/tree/main/packages/hive-playground/javascript/sass). In this example project, [Rollup](https://rollupjs.org/guide/en/) and [TypeScript](https://www.typescriptlang.org/) were used.**
+
+```sass title="hive-custom.sass"
+// 1. hive required stylesheets
+@import '../node_modules/@alexbjr369/hive-sass/src/variables'
+
+// 2. variables overrides
+@import './variables-overrides'
+
+// 3. remainder of hive required stylesheets
+@import '../node_modules/@alexbjr369/hive-sass/src/functions'
+@import '../node_modules/@alexbjr369/hive-sass/src/mixins'
+
+// 4. optional components
+@import '../node_modules/@alexbjr369/hive-sass/src/layout/container'
+
+// 5. autoral imports
+@import './autoral'
+```
+
+  </TabItem>
+  <TabItem value="scss">
+
+> **Check Hive's [`playground project`](https://github.com/alexbjr369/hive/tree/main/packages/hive-playground/javascript/scss). In this example project, [Rollup](https://rollupjs.org/guide/en/) and [TypeScript](https://www.typescriptlang.org/) were used.**
+
+```scss title="hive-custom.scss"
+// 1. hive required stylesheets
+@import '../node_modules/@alexbjr369/hive-scss/src/variables';
+
+// 2. variables overrides
+@import './variables-overrides';
+
+// 3. remainder of hive required stylesheets
+@import '../node_modules/@alexbjr369/hive-scss/src/functions';
+@import '../node_modules/@alexbjr369/hive-scss/src/mixins';
+
+// 4. optional components
+@import '../node_modules/@alexbjr369/hive-scss/src/layout/container';
+
+// 5. autoral imports
+@import './autoral';
+```
+
+  </TabItem>
+  <TabItem value="stylus">
+
+> **Check Hive's [`playground project`](https://github.com/alexbjr369/hive/tree/main/packages/hive-playground/javascript/stylus). In this example project, [Rollup](https://rollupjs.org/guide/en/) and [TypeScript](https://www.typescriptlang.org/) were used.**
+
+```sass title="hive-custom.sass"
+// 1. hive required stylesheets
+@import '../node_modules/@alexbjr369/hive-stylus/src/_variables'
+
+// 2. variables overrides
+@import './_variables-overrides'
+
+// 3. remainder of hive required stylesheets
+@import '../node_modules/@alexbjr369/hive-stylus/src/_functions'
+@import '../node_modules/@alexbjr369/hive-stylus/src/_mixins'
+
+// 4. optional components
+@import '../node_modules/@alexbjr369/hive-stylus/src/layout/_container'
+
+// 5. autoral imports
+@import './_autoral'
+```
+
+  </TabItem>
+</Tabs>

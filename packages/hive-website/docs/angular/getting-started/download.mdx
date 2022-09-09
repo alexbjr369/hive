@@ -1,0 +1,134 @@
+---
+id: download
+title: Download
+sidebar_label: Download
+description: Just another UI framework ...
+keywords:
+  - Hive UI Framework
+  - Alex Bleggi
+image: /static/other/img/hive.svg
+slug: /angular/getting-started/download
+---
+
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+## Package managers
+
+###### Manual installation:
+
+**1. Install Hive Angular framework:**
+
+```bash
+# npm
+npm i @alexbjr369/hive-angular
+
+# yarn
+yarn add @alexbjr369/hive-angular
+
+# pnpm
+pnpm add @alexbjr369/hive-angular
+```
+
+**2. Install Hive CSS framework:**
+
+<Tabs
+  defaultValue="css"
+  values={[
+    {label: 'CSS', value: 'css'},
+    {label: 'Less', value: 'less'},
+    {label: 'Sass', value: 'sass'},
+    {label: 'SCSS', value: 'scss'},
+    {label: 'Stylus', value: 'stylus'},
+  ]}>
+  <TabItem value="css">
+
+```bash
+# npm
+npm i @alexbjr369/hive-css
+
+# yarn
+yarn add @alexbjr369/hive-css
+
+# pnpm
+pnpm add @alexbjr369/hive-css
+```
+
+  </TabItem>
+  <TabItem value="less">
+
+```bash
+# npm
+npm i @alexbjr369/hive-less -D
+
+# yarn
+yarn add @alexbjr369/hive-less -D
+
+# pnpm
+pnpm add @alexbjr369/hive-less -D
+```
+
+  </TabItem>
+  <TabItem value="sass">
+
+```bash
+# npm
+npm i @alexbjr369/hive-sass -D
+
+# yarn
+yarn add @alexbjr369/hive-sass -D
+
+# pnpm
+pnpm add @alexbjr369/hive-sass -D
+```
+
+  </TabItem>
+  <TabItem value="scss">
+
+```bash
+# npm
+npm i @alexbjr369/hive-scss -D
+
+# yarn
+yarn add @alexbjr369/hive-scss -D
+
+# pnpm
+pnpm add @alexbjr369/hive-scss -D
+```
+
+  </TabItem>
+  <TabItem value="stylus">
+
+```bash
+# npm
+npm i @alexbjr369/hive-stylus -D
+
+# yarn
+yarn add @alexbjr369/hive-stylus -D
+
+# pnpm
+pnpm add @alexbjr369/hive-stylus -D
+```
+
+  </TabItem>
+</Tabs>
+
+## Hive CLI
+
+Hive CLI will prompt a few questions and depending on the answers, it will download and install the relevant packages.
+
+1. Run the following command:
+
+```bash
+npx hive-ui-init
+```
+
+2. Choose which **Hive CSS framework** you wish to use in your project:
+
+<img src={useBaseUrl('img/docs/01-hive-cli.png')} />
+
+3. Select **Hive Angular**:
+
+<img src={useBaseUrl('img/docs/angular/01-hive-cli.png')} />

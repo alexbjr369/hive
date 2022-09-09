@@ -1,0 +1,18 @@
+/**
+  * @prop --hv-container-padding: Defines the container padding.
+  * @prop --hv-container-padding-sm: Defines the container padding on sm screens.
+  * @prop --hv-container-padding-md: Defines the container padding on md screens.
+  * @prop --hv-container-padding-lg: Defines the container padding on lg screens.
+  * @prop --hv-container-padding-xl: Defines the container padding on xl screens.
+  * @prop --hv-container-padding-xxl: Defines the container padding on xxl screens.
+  *
+  * @prop --hv-container-width-sm: Defines the container width on sm screens.
+  * @prop --hv-container-width-md: Defines the container width on md screens.
+  * @prop --hv-container-width-lg: Defines the container width on lg screens.
+  * @prop --hv-container-width-xl: Defines the container width on xl screens.
+  * @prop --hv-container-width-xl: Defines the container width on xxl screens.
+  */
+
+:host {
+  display: block;
+}

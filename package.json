@@ -1,0 +1,36 @@
+{
+  "name": "@alexbjr369/hive-monorepo",
+  "version": "0.0.0",
+  "description": "Hive monorepo.",
+  "author": "Alex Bleggi <https://alexbleggi.netlify.app>",
+  "homepage": "https://alexbleggi.netlify.app/hive",
+  "repository": "https://github.com/alexbjr369/hive.git",
+  "bugs": "https://github.com/alexbjr369/hive/issues",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=16"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "packages/playground/*"
+    ]
+  },
+  "scripts": {
+    "commit": "cz",
+    "start": "hive --development",
+    "build": "hive --production",
+    "playground": "hive --playground",
+    "website": "hive --website"
+  },
+  "devDependencies": {
+    "@alexbjr369/hive-monorepo-cli": "^1.0.0-alpha.0",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.1",
+    "lerna": "^5.1.8"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "command": {
+    "publishConfig": {
+      "registry": "http://localhost:4873"
+    },
+    "version": {
+      "allowBranch": "main",
+      "conventionalCommits": true,
+      "changelogPreset": "cz-conventional-changelog",
+      "message": "chore(release): publish"
+    }
+  },
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "version": "1.0.0-alpha.0"
+}

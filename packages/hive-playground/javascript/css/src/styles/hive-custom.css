@@ -1,0 +1,20 @@
+/* containers */
+:root {
+  --hv-container-width-sm: 540px;
+  --hv-container-width-md: 720px;
+  --hv-container-width-lg: 900px;
+  --hv-container-width-xl: 1140px;
+  --hv-container-width-xxl: 1320px;
+}
+
+:root {
+  --hv-container-padding: 1.5rem;
+}
+
+:root {
+  --hv-container-padding-sm: 1rem;
+  --hv-container-padding-md: 1rem;
+  --hv-container-padding-lg: 2rem;
+  --hv-container-padding-xl: 1rem;
+  --hv-container-padding-xxl: 1rem;
+}
